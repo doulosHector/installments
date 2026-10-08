@@ -1,0 +1,115 @@
+.facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 8px 0 22px;
+}
+
+.fact {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 14px;
+}
+
+.fact span {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.fact strong {
+  display: block;
+  font-size: 19px;
+  font-weight: 700;
+  margin-top: 2px;
+  letter-spacing: -0.01em;
+}
+
+.proj {
+  background: var(--surface);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.prow {
+  display: grid;
+  grid-template-columns: 76px 1fr auto;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  padding: 12px 16px;
+  border-top: 1px solid var(--line);
+}
+
+.prow:first-child {
+  border-top: 0;
+}
+
+.prow .pm {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.prow .pm small {
+  display: block;
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.pbar {
+  display: block;
+  height: 10px;
+  border-radius: 5px;
+  background: var(--surface-2);
+  overflow: hidden;
+}
+
+.pbar b {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  border-radius: 5px;
+}
+
+.pval {
+  text-align: right;
+  font-weight: 600;
+  font-size: 15px;
+  min-width: 90px;
+}
+
+.pval small {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.pval small.same {
+  color: var(--muted);
+}
+
+.pdetail {
+  padding: 0 16px 14px 102px;
+  font-size: 14px;
+  margin-top: -4px;
+}
+
+.pdetail div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 5px 0;
+  border-top: 1px dashed var(--line);
+  color: var(--muted);
+}
+
+.pdetail div:first-child {
+  border-top: 0;
+}
+
+.pdetail b {
+  font-weight: 600;
+  color: var(--ink);
+}

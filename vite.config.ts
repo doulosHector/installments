@@ -8,6 +8,9 @@ const THEME_COLOR = '#ECEEF2'
 
 // https://vite.dev/config/
 export default defineConfig({
+  // Public path the app is served from. GitHub Pages project sites live
+  // under /<repo>/, so CI sets BASE_PATH (e.g. `/installments/`).
+  base: process.env.BASE_PATH || '/',
   plugins: [
     react(),
     VitePWA({

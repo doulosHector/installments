@@ -1,0 +1,76 @@
+.sync {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--muted);
+  margin: 4px 2px 14px;
+}
+
+.sync i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--muted);
+}
+
+/* Import sheets */
+.confirm p {
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+
+.fields {
+  margin: 0 0 16px;
+  border-radius: 14px;
+  background: var(--surface-2);
+  overflow: hidden;
+}
+
+.fields div {
+  display: grid;
+  grid-template-columns: 104px 1fr;
+  gap: 10px;
+  padding: 10px 14px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+}
+
+.fields div:first-child {
+  border-top: 0;
+}
+
+.fields b {
+  font-weight: 600;
+}
+
+.fields span {
+  color: var(--muted);
+}
+
+.fields em {
+  font-style: normal;
+  font-size: 12px;
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+  border-radius: 999px;
+  padding: 0 7px;
+  margin-left: 4px;
+}
+
+.example {
+  margin: 0 0 16px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--surface-2);
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.hint {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0 0 16px;
+}

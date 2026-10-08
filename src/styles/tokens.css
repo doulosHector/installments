@@ -1,0 +1,57 @@
+/* Design tokens. Light by default; dark follows the system unless the user
+   forces a theme with <html data-theme="light|dark">. */
+:root {
+  --bg: #eceef2;
+  --surface: #ffffff;
+  --surface-2: #e2e5eb;
+  --ink: #1a1d26;
+  --muted: #5f6576;
+  --line: #d7dbe3;
+  --accent: #0e7a6b;
+  --accent-strong: #085a4f;
+  --accent-soft: #d3ede7;
+  --on-accent: #ffffff;
+  --seg-empty: #d9dde5;
+  --up: #a24a17;
+  --danger: #b3261e;
+  --scrim: rgba(20, 22, 30, 0.42);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #13151b;
+    --surface: #1c1f27;
+    --surface-2: #272b35;
+    --ink: #eceef3;
+    --muted: #959bac;
+    --line: #2d3240;
+    --accent: #5bd0b2;
+    --accent-strong: #a6f0dc;
+    --accent-soft: #173a33;
+    --on-accent: #0a2a23;
+    --seg-empty: #2e3341;
+    --up: #f0a06f;
+    --danger: #ff8a80;
+    --scrim: rgba(0, 0, 0, 0.6);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='dark'] {
+  --bg: #13151b;
+  --surface: #1c1f27;
+  --surface-2: #272b35;
+  --ink: #eceef3;
+  --muted: #959bac;
+  --line: #2d3240;
+  --accent: #5bd0b2;
+  --accent-strong: #a6f0dc;
+  --accent-soft: #173a33;
+  --on-accent: #0a2a23;
+  --seg-empty: #2e3341;
+  --up: #f0a06f;
+  --danger: #ff8a80;
+  --scrim: rgba(0, 0, 0, 0.6);
+  color-scheme: dark;
+}

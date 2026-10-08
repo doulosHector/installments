@@ -1,0 +1,18 @@
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+.delta.up {
+  color: var(--up);
+}
+
+.delta.down {
+  color: var(--accent);
+}
+
+.muted-note {
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+  padding: 20px 8px;
+}

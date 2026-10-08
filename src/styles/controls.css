@@ -1,0 +1,134 @@
+/* Buttons, segmented controls, chips and form fields. */
+.btns {
+  display: grid;
+  gap: 8px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: 14px;
+  font-weight: 600;
+  text-align: center;
+  background: var(--surface-2);
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.btn.danger {
+  color: var(--danger);
+}
+
+.btn.danger.armed {
+  background: var(--danger);
+  color: var(--surface);
+}
+
+.seg-ctl {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  background: var(--surface-2);
+  border-radius: 12px;
+  padding: 3px;
+  gap: 3px;
+}
+
+.seg-ctl button {
+  padding: 8px 6px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.seg-ctl button[aria-pressed='true'] {
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.chips.scroll {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin: 12px -18px 0;
+  padding: 0 18px;
+}
+
+.chips.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.chip {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+  border: 1px solid var(--line);
+  white-space: nowrap;
+  color: var(--muted);
+}
+
+.chip[aria-pressed='true'] {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+
+.field {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.field > span {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.field input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1.5px solid transparent;
+  background: var(--surface-2);
+  font-size: 16px;
+  min-height: 48px;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.field input.bad {
+  border-color: var(--danger);
+}
+
+.two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.err {
+  color: var(--danger);
+  font-size: 14px;
+  margin: 0 0 10px;
+}
+
+.err:empty {
+  display: none;
+}

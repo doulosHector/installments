@@ -2,7 +2,6 @@ import type { ComponentType } from 'react'
 import { AppHeader, BottomNav } from '../components/layout'
 import { useInstallments } from '../context/installments'
 import { useUi } from '../context/ui'
-import { MonthView } from '../features/month'
 import { ProjectionView } from '../features/projection'
 import { PurchasesView } from '../features/purchases'
 import { SettingsView } from '../features/settings'
@@ -12,7 +11,6 @@ import { AppProviders } from './AppProviders'
 import { SheetOutlet } from './SheetOutlet'
 
 const VIEWS: Record<View, ComponentType> = {
-  month: MonthView,
   purchases: PurchasesView,
   projection: ProjectionView,
   settings: SettingsView,

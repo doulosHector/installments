@@ -2,9 +2,10 @@ import { useMemo } from 'react'
 import { EmptyState } from '../../components/ui'
 import { useInstallments } from '../../context/installments'
 import { useUi } from '../../context/ui'
-import { useMoney } from '../../hooks/useMoney'
-import { filterPurchases, remainingAfter } from '../../services/purchases'
-import { monthLong } from '../../utils/month'
+import { monthSummary } from '../../services/month'
+import { filterPurchases } from '../../services/purchases'
+import { AheadStrip } from './components/AheadStrip'
+import { MonthHero } from './components/MonthHero'
 import { PurchaseFilters } from './components/PurchaseFilters'
 import { PurchaseItem } from './components/PurchaseItem'
 import './purchases.css'
@@ -12,14 +13,13 @@ import './purchases.css'
 export function PurchasesView() {
   const { purchases } = useInstallments().state
   const { month, filters, openSheet } = useUi()
-  const money = useMoney()
+  const summary = useMemo(
+    () => monthSummary(purchases, month),
+    [purchases, month],
+  )
   const rows = useMemo(
     () => filterPurchases(purchases, month, filters),
     [purchases, month, filters],
-  )
-  const { remaining, count } = useMemo(
-    () => remainingAfter(purchases, month),
-    [purchases, month],
   )
 
   if (!purchases.length)
@@ -31,13 +31,8 @@ export function PurchasesView() {
 
   return (
     <>
-      <div className="summary">
-        <div>
-          <span>Still to pay after {monthLong(month)}</span>
-          <strong className="num">{money.format(remaining)}</strong>
-        </div>
-        <span>{count} current</span>
-      </div>
+      <MonthHero summary={summary} />
+      <AheadStrip />
       <PurchaseFilters />
       <div className="plist">
         {rows.length ? (

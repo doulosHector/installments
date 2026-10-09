@@ -1,5 +1,5 @@
-import type { Cents, MonthIndex, Purchase, PurchaseFilters } from '../types'
-import { getSchedule, scheduleAll, type ScheduledPurchase } from './schedule'
+import type { MonthIndex, Purchase, PurchaseFilters } from '../types'
+import { scheduleAll, type ScheduledPurchase } from './schedule'
 
 /** Every tag in use, sorted alphabetically. */
 export const allTags = (purchases: readonly Purchase[]): string[] => {
@@ -49,20 +49,3 @@ export const filterPurchases = (
         b.schedule.due - a.schedule.due
       )
     })
-
-/** Money still owed after `month`, over the purchases not yet paid off. */
-export const remainingAfter = (
-  purchases: readonly Purchase[],
-  month: MonthIndex,
-): { remaining: Cents; count: number } => {
-  let remaining = 0
-  let count = 0
-  for (const p of purchases) {
-    const s = getSchedule(p, month)
-    if (s.status !== 'done' && s.status !== 'future') {
-      remaining += s.remaining
-      count++
-    }
-  }
-  return { remaining, count }
-}

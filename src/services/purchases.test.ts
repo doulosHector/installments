@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { monthIndex, purchase } from '../test/factories'
 import type { PurchaseFilters } from '../types'
-import { allTags, filterPurchases, remainingAfter } from './purchases'
+import { allTags, filterPurchases } from './purchases'
 
 const jun = monthIndex(2026, 6)
 const filters = (
@@ -66,14 +66,5 @@ describe('filterPurchases', () => {
   it('keeps future purchases under All, whatever the tag or text', () => {
     // Same as the original app: future purchases skip the other filters.
     expect(ids({ status: 'all', query: 'zzz' })).toEqual(['future'])
-  })
-})
-
-describe('remainingAfter', () => {
-  it('sums what is left of purchases still being paid', () => {
-    const { remaining, count } = remainingAfter(all, jun)
-    // Laptop: 5 of 6 paid; Car: 5 of 24 paid.
-    expect(count).toBe(2)
-    expect(remaining).toBe(20000 + 95000)
   })
 })

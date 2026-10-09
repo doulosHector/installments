@@ -8,35 +8,16 @@ interface Tab {
   view: View
   icon: UiIconName
   label: string
-  ariaLabel: string
 }
 
 const LEFT: Tab[] = [
-  { view: 'month', icon: 'month', label: 'Month', ariaLabel: 'This month' },
-  {
-    view: 'purchases',
-    icon: 'purchases',
-    label: 'Purchases',
-    ariaLabel: 'Purchases',
-  },
+  { view: 'purchases', icon: 'purchases', label: 'Purchases' },
+  { view: 'projection', icon: 'projection', label: 'Projection' },
 ]
 
-const RIGHT: Tab[] = [
-  {
-    view: 'projection',
-    icon: 'projection',
-    label: 'Projection',
-    ariaLabel: 'Projection',
-  },
-  {
-    view: 'settings',
-    icon: 'settings',
-    label: 'Settings',
-    ariaLabel: 'Settings',
-  },
-]
+const RIGHT: Tab[] = [{ view: 'settings', icon: 'settings', label: 'Settings' }]
 
-/** Four tabs with the add-purchase button in the middle. */
+/** Tabs with the add-purchase button in the middle. */
 export function BottomNav() {
   const { view, setView, openSheet } = useUi()
 
@@ -44,7 +25,7 @@ export function BottomNav() {
     <button
       key={t.view}
       type="button"
-      aria-label={t.ariaLabel}
+      aria-label={t.label}
       aria-current={view === t.view ? 'page' : undefined}
       onClick={() => setView(t.view)}
     >

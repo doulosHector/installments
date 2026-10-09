@@ -10,7 +10,7 @@ const INITIAL_FILTERS: PurchaseFilters = {
 }
 
 export function UiProvider({ children }: { children: ReactNode }) {
-  const [view, setViewState] = useState<View>('month')
+  const [view, setViewState] = useState<View>('purchases')
   const [today] = useState(currentMonthIndex)
   const [month, setMonthState] = useState(today)
   const [openMonth, setOpenMonth] = useState<MonthIndex | null>(null)

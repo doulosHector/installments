@@ -2,12 +2,6 @@ import type { ReactNode } from 'react'
 
 /** Interface icons, drawn on a 24×24 grid with strokes. */
 export const UI_ICONS = {
-  month: (
-    <>
-      <rect x="3.5" y="5" width="17" height="15" rx="3" />
-      <path d="M3.5 10h17M8 3v4M16 3v4" />
-    </>
-  ),
   purchases: (
     <>
       <path d="M8 7h12M8 12h12M8 17h12" />

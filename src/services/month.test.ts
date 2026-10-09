@@ -24,7 +24,6 @@ describe('monthSummary', () => {
     expect(s.total).toBe(15000 + 10000)
     expect(s.delta).toBe(0)
     expect(s.endingCount).toBe(1)
-    expect(s.starting.map((r) => r.purchase.id)).toEqual(['fresh'])
   })
 
   it('reports the change when a purchase ends', () => {

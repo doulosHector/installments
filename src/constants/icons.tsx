@@ -12,6 +12,12 @@ export const UI_ICONS = {
   ),
   add: <path d="M12 5v14M5 12h14" />,
   projection: <path d="M5 20V11M10 20V6M15 20v-8M20 20v-5" />,
+  statistics: (
+    <>
+      <path d="M20.5 13.5A8.5 8.5 0 1 1 10.5 3.6V13.5z" />
+      <path d="M14 3.1a8.5 8.5 0 0 1 6.9 6.9H14z" />
+    </>
+  ),
   settings: (
     <>
       <path d="M4 7h10M18 7h2M4 17h4M12 17h8" />

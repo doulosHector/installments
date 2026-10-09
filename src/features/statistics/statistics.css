@@ -1,0 +1,108 @@
+/* Progress of current purchases */
+.stat-hero {
+  padding: 18px;
+}
+
+.stat-hero > span {
+  display: block;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.stat-hero strong {
+  display: block;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-top: 2px;
+}
+
+.stat-bar {
+  display: block;
+  height: 10px;
+  border-radius: 5px;
+  background: var(--seg-empty);
+  overflow: hidden;
+  margin: 14px 0 8px;
+}
+
+.stat-bar b {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  border-radius: 5px;
+}
+
+.stat-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.stat-meta b {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* Payments by tag */
+.tagrow {
+  display: grid;
+  grid-template-columns: minmax(0, 104px) 1fr auto;
+  gap: 10px;
+  align-items: center;
+  padding: 12px 16px;
+  border-top: 1px solid var(--line);
+}
+
+.tagrow:first-child {
+  border-top: 0;
+}
+
+.tagrow .tname {
+  font-size: 14px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tagrow .tname small {
+  display: block;
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.tagrow .tname.none {
+  color: var(--muted);
+}
+
+.tbar {
+  display: block;
+  height: 10px;
+  border-radius: 5px;
+  background: var(--surface-2);
+  overflow: hidden;
+}
+
+.tbar b {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  border-radius: 5px;
+}
+
+.tagrow .pval {
+  text-align: right;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.stats-hint {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 8px 2px 0;
+}

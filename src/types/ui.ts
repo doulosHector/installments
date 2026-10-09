@@ -1,6 +1,6 @@
 import type { ParsedBackup } from './backup'
 
-export type View = 'purchases' | 'projection' | 'settings'
+export type View = 'purchases' | 'projection' | 'statistics' | 'settings'
 
 /** Which purchases the Purchases view lists. */
 export type StatusFilter = 'active' | 'done' | 'all'

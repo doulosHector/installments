@@ -15,9 +15,12 @@ const LEFT: Tab[] = [
   { view: 'projection', icon: 'projection', label: 'Projection' },
 ]
 
-const RIGHT: Tab[] = [{ view: 'settings', icon: 'settings', label: 'Settings' }]
+const RIGHT: Tab[] = [
+  { view: 'statistics', icon: 'statistics', label: 'Statistics' },
+  { view: 'settings', icon: 'settings', label: 'Settings' },
+]
 
-/** Tabs with the add-purchase button in the middle. */
+/** Four tabs with the add-purchase button in the middle. */
 export function BottomNav() {
   const { view, setView, openSheet } = useUi()
 

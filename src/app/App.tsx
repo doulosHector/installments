@@ -5,6 +5,7 @@ import { useUi } from '../context/ui'
 import { ProjectionView } from '../features/projection'
 import { PurchasesView } from '../features/purchases'
 import { SettingsView } from '../features/settings'
+import { StatisticsView } from '../features/statistics'
 import { useDocumentTheme } from '../hooks/useDocumentTheme'
 import type { View } from '../types'
 import { AppProviders } from './AppProviders'
@@ -13,6 +14,7 @@ import { SheetOutlet } from './SheetOutlet'
 const VIEWS: Record<View, ComponentType> = {
   purchases: PurchasesView,
   projection: ProjectionView,
+  statistics: StatisticsView,
   settings: SettingsView,
 }
 

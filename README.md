@@ -4,9 +4,9 @@ Track purchases paid in monthly installments and see what you pay each month. It
 
 ## Features
 
-- **Month**: the total to pay in the month, the change against the previous month, the next three months, and every payment due. Purchases made this month show up apart, because their first payment is next month.
-- **Purchases**: every purchase with its progress (one segment per payment), what is paid and what is left. Filter by current, finished or all, by tag, or by text.
+- **Purchases** (home): the total to pay in the month, the change against the previous month and the next three months on top; below, every purchase with its progress (one segment per payment), what is paid and what is left. Filter by current, finished or all, by tag, or by text.
 - **Projection**: monthly totals for the next 12 months, when the last payment is, and which purchases you pay in each month.
+- **Statistics**: what is still to pay and how much of it is paid, the monthly average and the highest month over the next 12 months, total bought, purchases paid off, purchases ending in the next 3 months (and how much they free up per month), and the month's payments by tag.
 - **Add and edit**: description, total amount, purchase date, number of payments and tags. A preview shows the payment amount and the first and last months. Deleting asks for a second tap and can be undone.
 - **Settings**: light, dark or system theme; display currency; JSON backup export and import, CSV export, copy backup to the clipboard, and delete everything (with undo).
 
@@ -54,12 +54,12 @@ src/
 │   ├── toast/         # Toast messages with an optional Undo action
 │   └── ui/            # Active view, browsed month, filters, open sheet
 ├── features/
-│   ├── month/       # Month view
-│   ├── purchases/   # Purchase list, filters and the add/edit sheet
+│   ├── purchases/   # Month header, purchase list, filters and the add/edit sheet
 │   ├── projection/  # 12-month projection
+│   ├── statistics/  # Statistics view
 │   └── settings/    # Settings and the import sheets
 ├── hooks/          # useMoney, useDocumentTheme, useDelayedFocus
-├── services/       # Pure logic: schedule, month summary, filters, projection, backup, storage
+├── services/       # Pure logic: schedule, month summary, filters, projection, statistics, backup, storage
 ├── styles/         # Design tokens and global styles
 ├── test/           # Test factories
 ├── types/          # Domain and UI types
